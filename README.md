@@ -2,7 +2,7 @@
 Herzlich Willkommen zu meinem Modul 122 Projekt.
 ![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/9172525f-c6b4-45cc-bbc9-f1616660edd9)
 ___
-Kleine Zusammenfassung:
+# Kleine Zusammenfassung:
 Zuerst habe ich im Postgress die Filmdatenbank erstellt. <br>
 Dann habe ich einen simplen Python Code geschrieben, welcher die Filme in eine Tabelle ladet. <br>
 Dann habe ich einen Filter erstellt das keine Dupkikate hochgeladen werden können. <br>
