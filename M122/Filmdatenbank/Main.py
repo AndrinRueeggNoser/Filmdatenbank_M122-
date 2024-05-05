@@ -28,7 +28,17 @@ movie_data = [
     ("Emily Erdbeer", "2012-12-13", 30, "5.5", "Animation"),
     ("Murder Mystery", "2019-06-14", 97, "6.0", "Detective Stories"),
     ("SpongeBob Schwammkopf", "1999-05-01", 23, "8.2", "Comedy Slapstick"),
-    ("One Piece Film: Red", "2022-08-06", 100, "8.4", "Action Adventure Animation")
+    ("One Piece Film: Red", "2022-08-06", 100, "8.4", "Action Adventure Animation"),
+    ("The Dark Knight", "2008-07-18", 152, "9.0", "Action Crime Drama"),
+    ("Inception", "2010-07-16", 148, "8.8", "Action Adventure Sci-Fi"),
+    ("Interstellar", "2014-11-07", 169, "8.6", "Adventure Drama Sci-Fi"),
+    ("The Godfather", "1972-03-24", 175, "9.2", "Crime Drama"),
+    ("Pulp Fiction", "1994-10-14", 154, "8.9", "Crime Drama"),
+    ("Fight Club", "1999-10-15", 139, "8.8", "Drama"),
+    ("Forrest Gump", "1994-07-06", 142, "8.8", "Drama Romance"),
+    ("The Shawshank Redemption", "1994-09-22", 142, "9.3", "Drama"),
+    ("The Lord of the Rings: The Return of the King", "2003-12-17", 201, "8.9", "Action Adventure Drama"),
+    ("Star Wars: Episode V - The Empire Strikes Back", "1980-06-20", 124, "8.7", "Action Adventure Fantasy")
 ]
 
 for movie in movie_data:
