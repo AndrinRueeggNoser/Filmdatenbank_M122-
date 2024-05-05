@@ -9,36 +9,35 @@ conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host)
 
 cur = conn.cursor()
 
-create_query = """
-CREATE TABLE movies (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    release_date DATE,
-    length_minutes INT,
-    rating DECIMAL(3, 1),
-    category VARCHAR(50)
-);
-"""
-
 select_query = """
 SELECT * FROM movies WHERE name = %s AND release_date = %s;
 """
 
 insert_query = """
-INSERT INTO movies (name, release_date, length_minutes, rating, category)
-VALUES (%s, %s, %s, %s, %s);
+INSERT INTO movies (id, name, release_date, length_minutes, rating, category)
+VALUES (%s, %s, %s, %s, %s, %s);
 """
 
+def get_next_available_id():
+    cur.execute("SELECT id FROM movies WHERE id BETWEEN 1 AND 10;")
+    ids = {i[0] for i in cur.fetchall()}
+    all_ids = set(range(1, 11))
+    available_ids = all_ids - ids
+    return min(available_ids) if available_ids else None
+
 movie_data = [
-    ("Spiderman: No Way Home", "2021-12-17", 148, 8.2, "Action Adventure Fantasy"),
-    ("The Matrix Resurrections", "2021-12-22", 148, 5.8, "Action Sci-Fi"),
+    ("Spiderman: No Way Home", "2021-12-17", 148, "8.2", "Action Adventure Fantasy"),
+    ("The Matrix Resurrections", "2021-12-22", 148, "5.8", "Action Sci-Fi"),
 ]
 
 for movie in movie_data:
     cur.execute(select_query, (movie[0], movie[1]))
     if cur.fetchone() is not None:
         continue
-    cur.execute(insert_query, movie)
+    next_id = get_next_available_id()
+    if next_id is None:
+        continue
+    cur.execute(insert_query, (next_id, *movie))
 conn.commit()
 
 cur.close()
