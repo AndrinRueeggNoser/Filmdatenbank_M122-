@@ -2,25 +2,34 @@
 <html>
 <head>
     <title>Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Release Date</th>
-            <th>Category</th>
-            <th>Length (minutes)</th>
-            <th>Rating</th>
-        </tr>
-        {% for movie in movies %}
-        <tr>
-            <td>{{ movie[1] }}</td>
-            <td>{{ movie[2] }}</td>
-            <td>{{ movie[3] }}</td>
-            <td>{{ movie[4] }}</td>
-            <td>{{ movie[5] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    <div class="container">
+        <h1 class="my-4">Movies</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Release Date</th>
+                    <th>Category</th>
+                    <th>Length (minutes)</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <td>{{ movie[1] }}</td>
+                    <td>{{ movie[2] }}</td>
+                    <td>{{ movie[3] }}</td>
+                    <td>{{ movie[4] }}</td>
+                    <td>{{ movie[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
