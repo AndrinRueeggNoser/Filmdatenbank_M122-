@@ -19,8 +19,13 @@ Und im Code kann man eine mail angeben und den Personen die Tabelle als zip file
 ![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/093a21ab-9798-43cb-ba5b-1ccd20672769)
 
 
+___
+
+# UML 
+![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/c9c96c3c-6eb2-4613-94c5-dce1d0a609d8)
 
 ___
+
 Vielen Dank für das lesen, und ich hoffe Ihnen gefällt mein kleines Projekt!
 
 ![2a848b5ac4b72488fe3bde248d87be08_w200](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/88e72c6d-d9f0-4fce-8e9c-075731992c0a)
