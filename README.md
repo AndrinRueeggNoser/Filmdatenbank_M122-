@@ -47,7 +47,86 @@ Und im Code kann man eine mail angeben und den Personen die Tabelle als zip file
 ___
 
 # UML 
-![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/c9c96c3c-6eb2-4613-94c5-dce1d0a609d8)
+```
+
+               .--------.
+              (   Start   )
+               '--------'
+                   |
+                   v
+               .---------------.
+              ( Read config.json )
+               '---------------'
+                   |
+                   v
+               .------------------.
+              ( Initialize Logger )
+               '------------------'
+                   |
+                   v
+               .------------------.
+              ( Connect to Database )
+               '------------------'
+                   |
+        +----------+----------+
+        |  Connection Failed?  |
+        +----------+----------+
+        |                      |
+      Yes                     No
+        |                      |
+        v                      v
+    .----------.          .-----------.
+   ( Log Error  )        ( Execute SQL )
+    '---------'          '-----------'
+                           |
+                           v
+                      .------------.
+                     ( Import Data )
+                      '------------'
+                           |
+                  +--------+--------+
+                  |  Import Failed?  |
+                  +--------+--------+
+                  |                 |
+                Yes                No
+                  |                 |
+                  v                 v
+       .-----------------.   .-------------.
+      ( Log Import Error ) ( Log Success )
+       '-----------------'   '-------------'
+                  |                 |
+                  v                 v
+              .------------.   .-------------.
+             ( Error Page  ) ( Set Up Flask  )
+              '------------'   '-------------'
+                               |
+                               v
+                          .------------.
+                         ( Config Mail )
+                          '------------'
+                               |
+                               v
+                         .---------------.
+                        ( Flask Routing  )
+                         '---------------'
+                               |
+                               v
+                         .-------------.
+                        ( Serve Pages  )
+                         '-------------'
+                               |
+                               v
+                         .-------------.
+                        ( Send Email   )
+                         '-------------'
+                               |
+                               v
+                             .-----.
+                            (  End  )
+                             '-----'
+
+```
+
 
 ___
 
