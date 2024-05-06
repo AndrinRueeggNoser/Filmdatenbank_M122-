@@ -11,6 +11,14 @@ ___
 * Ich gestalltete ich die Webseite noch mit ein bischen CSS und Java Script und fügte einen funktionierenden Filter hinzu. <br>
 * Am Schluss habe ich dan noch **Cronjob** hinzugefügt, bei dem mein Skript jeden Tag um 12 Uhr entweder neu geladen oder gestarted wird.
 ![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/beb7bd0d-7e70-4153-b457-d7251e2227ad)
+___
+
+**Nebenbei habe ich auch noch einen log file und einen config file erstellt.
+Und im Code kann man eine mail angeben und den Personen die Tabelle als zip file senden!(Dauert aber sehr lange)**
+![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/301013be-ea3b-4a20-8ec2-da4ed4aa1579)
+![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/093a21ab-9798-43cb-ba5b-1ccd20672769)
+
+
 
 ___
 Vielen Dank für das lesen, und ich hoffe Ihnen gefällt mein kleines Projekt!
