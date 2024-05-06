@@ -1,7 +1,10 @@
 import json
 import logging
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import psycopg2
+from flask_mail import Mail, Message
+import os
+import zipfile
 
 app = Flask(__name__)
 
@@ -19,6 +22,16 @@ user = config['database']['user']
 password = config['database']['password']
 host = config['database']['host']
 port = config['server']['port']
+
+
+app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'andrin.rueegg@noseryoung.com'
+app.config['MAIL_PASSWORD'] = 'Kingbro88unddiniMum'
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+
+mail = Mail(app)
 
 try:
     conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host)
@@ -75,6 +88,29 @@ def home():
         return render_template('index.html', movies=movies)
     except Exception as e:
         app.logger.error("Failed to fetch movies: %s", e)
+
+@app.route('/send-mail', methods=['POST'])
+def send_mail():
+    try:
+
+        zipf = zipfile.ZipFile('Table.zip', 'w', zipfile.ZIP_DEFLATED)
+        zipf.write('index.html')
+        zipf.close()
+
+
+        msg = Message('Hello', sender='andrin.rueegg@noseryoung.com', recipients=['andrinrueegg@icloud.com'])
+        msg.body = "Here is the table you requested."
+
+
+        with app.open_resource('Table.zip') as fp:
+            msg.attach('Table.zip', 'application/zip', fp.read())
+
+
+        mail.send(msg)
+
+        return 'Mail sent!'
+    except Exception as e:
+        return str(e)
 
 if __name__ == '__main__':
     try:
