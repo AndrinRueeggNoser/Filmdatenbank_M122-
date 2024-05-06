@@ -4,11 +4,14 @@ Herzlich Willkommen zu meinem Modul 122 Projekt.
 
 ___
 # Kleine Zusammenfassung:
-Zuerst habe ich im Postgress die Filmdatenbank erstellt. <br>
-Dann habe ich einen simplen Python Code geschrieben, welcher die Filme in eine Tabelle ladet. <br>
-Dann habe ich einen Filter erstellt das keine Dupkikate hochgeladen werden können. <br>
-Danach richtete ich Flask ein und schrieb einen html code für die Webseite. <br>
-Am Schluss gestalltete ich die Webseite noch mit ein bischen CSS und Java Script und fügte einen funktionierenden Filter hinzu. <br>
+* Zuerst habe ich im Postgress die Filmdatenbank erstellt. <br>
+* Dann habe ich einen simplen Python Code geschrieben, welcher die Filme in eine Tabelle ladet. <br>
+* Dann habe ich einen Filter erstellt das keine Dupkikate hochgeladen werden können. <br>
+* Danach richtete ich Flask ein und schrieb einen html code für die Webseite. <br>
+* Ich gestalltete ich die Webseite noch mit ein bischen CSS und Java Script und fügte einen funktionierenden Filter hinzu. <br>
+* Am Schluss habe ich dan noch **Cronjob** hinzugefügt, bei dem mein Skript jeden Tag um 12 Uhr entweder neu geladen oder gestarted wird.
+![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/beb7bd0d-7e70-4153-b457-d7251e2227ad)
+
 ___
 Vielen Dank für das lesen, und ich hoffe Ihnen gefällt mein kleines Projekt!
 
