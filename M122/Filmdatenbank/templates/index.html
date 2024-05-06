@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
+    <button onclick="downloadTableAsZip()" style="position: absolute; top: 10px; right: 10px;">Download Table</button>
     <title>Movies</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -109,7 +111,23 @@
         </tr>
         {% endfor %}
     </table>
-    <script>
+     <script>
+        function downloadTableAsZip() {
+            var zip = new JSZip();
+            var tableData = document.querySelector('table').outerHTML;
+            zip.file("table.html", tableData);
+            zip.generateAsync({type:"blob"}).then(function(content) {
+                var a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = URL.createObjectURL(content);
+                a.download = 'table.zip';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            });
+        }
+
     document.getElementById('filterForm').addEventListener('change', function() {
         var nameFilter = document.getElementById('nameFilter').value;
         var dateFilter = document.getElementById('dateFilter').value;

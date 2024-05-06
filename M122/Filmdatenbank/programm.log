@@ -1,0 +1,22 @@
+2024-05-06 10:31:29,090 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-05-06 10:31:29,090 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-05-06 10:31:29,093 INFO werkzeug MainThread :  * Restarting with stat
+2024-05-06 10:31:29,400 WARNING werkzeug MainThread :  * Debugger is active!
+2024-05-06 10:31:29,406 INFO werkzeug MainThread :  * Debugger PIN: 398-279-934
+2024-05-06 10:31:32,256 WARNING werkzeug MainThread :  * Debugger is active!
+2024-05-06 10:31:32,261 INFO werkzeug MainThread :  * Debugger PIN: 398-279-934
+2024-05-06 10:37:33,352 INFO werkzeug MainThread :  * Detected change in 'C:\\ProjectsTBZ\\Filmdatenbank_M122-\\M122\\Filmdatenbank\\Main.py', reloading
+2024-05-06 10:37:37,236 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-05-06 10:37:37,236 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-05-06 10:37:37,240 INFO werkzeug MainThread :  * Restarting with stat
+2024-05-06 10:37:37,343 WARNING werkzeug MainThread :  * Debugger is active!
+2024-05-06 10:37:37,348 INFO werkzeug MainThread :  * Debugger PIN: 398-279-934
+2024-05-06 10:37:40,229 WARNING werkzeug MainThread :  * Debugger is active!
+2024-05-06 10:37:40,233 INFO werkzeug MainThread :  * Debugger PIN: 398-279-934
+2024-05-06 10:37:59,664 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [06/May/2024 10:37:59] "GET / HTTP/1.1" 200 -
+2024-05-06 10:38:00,009 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [06/May/2024 10:38:00] "[36mGET /static/luffy.png HTTP/1.1[0m" 304 -
+2024-05-06 10:38:43,660 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [06/May/2024 10:38:43] "GET / HTTP/1.1" 200 -
+2024-05-06 10:38:43,922 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [06/May/2024 10:38:43] "[36mGET /static/luffy.png HTTP/1.1[0m" 304 -
+2024-05-06 10:38:44,905 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [06/May/2024 10:38:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

@@ -1,15 +1,30 @@
+import json
+import logging
 from flask import Flask, render_template
 import psycopg2
 
 app = Flask(__name__)
 
-dbname = "moviedb"
-user = "utopia1"
-password = "060507"
-host = "localhost"
 
-conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host)
-cur = conn.cursor()
+logging.basicConfig(filename='programm.log', level=logging.INFO,
+                    format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+
+
+with open('config.json') as f:
+    config = json.load(f)
+
+
+dbname = config['database']['dbname']
+user = config['database']['user']
+password = config['database']['password']
+host = config['database']['host']
+port = config['server']['port']
+
+try:
+    conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host)
+    cur = conn.cursor()
+except Exception as e:
+    app.logger.error("Failed to connect to the database: %s", e)
 
 query = """
 INSERT INTO movies (name, release_date, length_minutes, rating, category)
@@ -44,18 +59,28 @@ movie_data = [
 for movie in movie_data:
     cur.execute(check_query, (movie[0], movie[1]))
     if cur.fetchone() is None:
-        cur.execute(query, movie)
+        try:
+            cur.execute(query, movie)
+            app.logger.info("Inserted movie: %s", movie[0])
+        except Exception as e:
+            app.logger.error("Failed to insert movie: %s, error: %s", movie[0], e)
 
 conn.commit()
 
 @app.route('/')
 def home():
-    cur.execute("SELECT * FROM movies;")
-    movies = cur.fetchall()
-    return render_template('index.html', movies=movies)
+    try:
+        cur.execute("SELECT * FROM movies;")
+        movies = cur.fetchall()
+        return render_template('index.html', movies=movies)
+    except Exception as e:
+        app.logger.error("Failed to fetch movies: %s", e)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    try:
+        app.run(debug=True, port=port)
+    except Exception as e:
+        app.logger.error("Failed to run the application: %s", e)
 
 cur.close()
 conn.close()
