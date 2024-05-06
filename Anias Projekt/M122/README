@@ -8,3 +8,22 @@ Mein Projekt
 6. Alles Angeaben die im HTML angezeigt werden sollten hinzugefügt
 7. Mir ist dann aufgefallen dass das Verbinden mit meiner Datenbank nicht funktioniert
 8. Ich habe dann versucht alles mit der Datenbank zu verbinden
+9. Da ich dies Nicht geschaft habe musste habe ich mir zeit genommen andere sachen zu verbessern das es wenigstens ein paar punkte geben würde
+
+Im Screenshots Ordner sehen sie Screenshots zu meiner Dokumentation
+
+Screenshot 1: 
+Im Screenshot 1 sehen sie das HTML wenn der Code auf die Datenbank zugreiffen könnte, würde das HTML ganz anders aussehen und mit den Daten die ich hinzugefügt habe dargestellt sein. 
+Leider habe ich nicht geschaft das es sich verbindet. (Ich weiss nicht ob es hierbei etwas mit meinem Laptop zutun hatt oder mit meinem Code.)
+
+Screenshot 2:
+Im Screenshot 2 sieht man dike ERROR Message die ich erhalten habe als ich den Code Abgespielt habe. In der Error Message steht das entweder die IP falsch ist oder das m,eine VM nicht läuft.
+Da meine VM am laufen war und auch die IP Korrekt ist konnte es nicht sein das dies der Fehler war. Auch nach nachfragen bei mitschülern und Recherche im Internet habe ich nicht herausgefunden was der Fehler war.
+
+ANLEITUNG UM ES ZU BENUTZEN
+IP, Port, User und Passwort ändern: Siehe Screenshot 3
+
+Im Code können einzelne Filme Gelöscht oder Hinzugefügt werden.
+
+Sobald man den Code Ausführt nimmt es automatisch die Daten vom code auf die Datenbank und dann auf das HTML.
+
