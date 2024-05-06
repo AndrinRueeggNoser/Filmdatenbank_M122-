@@ -3,7 +3,7 @@ import logging
 from flask import Flask, render_template, request
 import psycopg2
 from flask_mail import Mail, Message
-import os
+
 import zipfile
 
 app = Flask(__name__)
