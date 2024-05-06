@@ -1,11 +1,12 @@
 from flask import Flask, render_template
 import psycopg2
+
 app = Flask(__name__)
 
 dbname = "moviedb"
 user = "ania"
 password = "123"
-host = "192.168.36.138"
+host = "192.168.36.134"
 port = "5432"
 
 try:
@@ -48,7 +49,7 @@ def home():
     return render_template('index.html', movies=movies)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5432)
+    app.run(debug=True, port=5000)
 
 cur.close()
 conn.close()
