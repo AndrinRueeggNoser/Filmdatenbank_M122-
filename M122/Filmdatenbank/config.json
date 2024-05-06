@@ -1,0 +1,11 @@
+{
+    "database": {
+        "dbname": "moviedb",
+        "user": "utopia1",
+        "password": "060507",
+        "host": "localhost"
+    },
+    "server": {
+        "port": 5001
+    }
+}
