@@ -3,13 +3,38 @@ Herzlich Willkommen zu meinem Modul 122 Projekt.
 ![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/d2fb3d95-7b32-4fc8-ae56-4c2c092c3eea)
 
 ___
-# Kleine Zusammenfassung:
-* Zuerst habe ich im Postgress die Filmdatenbank erstellt. <br>
-* Dann habe ich einen simplen Python Code geschrieben, welcher die Filme in eine Tabelle ladet. <br>
-* Dann habe ich einen Filter erstellt das keine Dupkikate hochgeladen werden können. <br>
-* Danach richtete ich Flask ein und schrieb einen html code für die Webseite. <br>
-* Ich gestalltete ich die Webseite noch mit ein bischen CSS und Java Script und fügte einen funktionierenden Filter hinzu. <br>
-* Am Schluss habe ich dan noch **Cronjob** hinzugefügt, bei dem mein Skript jeden Tag um 12 Uhr entweder neu geladen oder gestarted wird.
+# Filmdatenbank Projekt
+
+Dieses Projekt umfasst die Entwicklung einer umfassenden Filmdatenbank von der Einrichtung der PostgreSQL-Datenbank bis hin zur Implementierung einer Webanwendung mit Flask und dynamischen Webtechnologien. Ziel war es, eine benutzerfreundliche Plattform zu schaffen, auf der Benutzer Filme suchen, ansehen und verwalten können.
+
+## Technologien
+
+- **Datenbank**: PostgreSQL
+- **Backend**: Python, Flask
+- **Frontend**: HTML, CSS, JavaScript
+- **Automatisierung**: Cronjob
+
+## Projektübersicht
+
+### 1. Erstellung der Datenbank
+Zunächst wurde eine PostgreSQL-Datenbank erstellt, um die Grundlage für die Speicherung und Verwaltung von Filmdaten zu schaffen.
+
+### 2. Datenimport mit Python
+Ein Python-Skript wurde entwickelt, um Filmdaten effizient in die Datenbank zu importieren. Dieses Skript berücksichtigt auch die Vermeidung von Duplikaten, um die Datenintegrität zu gewährleisten.
+
+### 3. Implementierung eines Duplikatfilters
+Ein spezieller Algorithmus verhindert, dass Duplikate in die Datenbank gelangen. Dies stellt sicher, dass jeder Film nur einmal vorhanden ist.
+
+### 4. Einrichtung von Flask
+Die Webanwendung wurde mit Flask eingerichtet, was ein effizientes Routing und eine gute Verwaltung von Benutzeranfragen ermöglicht.
+
+### 5. Gestaltung der Webseite
+Die Webseite wurde mit HTML, CSS und JavaScript entworfen. Ein benutzerdefinierter Filter verbessert das Benutzererlebnis, indem er das Durchsuchen der Filmdatenbank nach verschiedenen Kriterien ermöglicht.
+
+### 6. Automatisierung durch Cronjob
+Ein Cronjob wurde konfiguriert, um das Python-Skript täglich um 12 Uhr auszuführen. Dies garantiert, dass die Datenbank regelmäßig aktualisiert wird, ohne manuelles Eingreifen.
+
+
 ![image](https://github.com/AndrinRueeggNoser/Filmdatenbank_M122/assets/145564904/beb7bd0d-7e70-4153-b457-d7251e2227ad)
 ___
 
